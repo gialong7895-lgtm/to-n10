@@ -875,13 +875,16 @@ h2.stitle em{
     <div class="rv rv-up" style="--d:.78s;margin-top:18px">
       <svg class="numline" viewBox="0 0 800 100">
         <defs>
-          <marker id="arrowL" markerWidth="8" markerHeight="8" refX="0" refY="4" orient="auto">
-            <path d="M8,0 L0,4 L8,8 Z" fill="rgba(255,255,255,.5)"/>
-          </marker>
-        </defs>
-        <!-- Trục chính có mũi tên hai đầu -->
-        <line x1="30" y1="50" x2="770" y2="50" class="axis"
-              marker-start="url(#arrowL)" marker-end="url(#arrowL)"/>
+          <defs>
+  <!-- Mũi tên trỏ sang phải (chiều dương) -->
+  <marker id="arrowR" markerWidth="10" markerHeight="10"
+          refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L8,4 L0,8 Z" fill="rgba(255,255,255,.55)"/>
+  </marker>
+</defs>
+<!-- Trục số — chỉ mũi tên bên PHẢI -->
+<line x1="30" y1="50" x2="770" y2="50" class="axis"
+      marker-end="url(#arrowR)"/>
         <!-- Các mốc -->
         <g class="tick">
           <line x1="150" y1="42" x2="150" y2="58"/>
@@ -960,12 +963,18 @@ h2.stitle em{
 
         <!-- Trục số: khoảng - đoạn - nửa khoảng -->
         <div class="rv rv-l" style="--d:.42s;margin-top:14px">
-          <svg class="numline" viewBox="0 0 800 130">
-            <!-- Trục chính -->
-            <line x1="30" y1="20" x2="770" y2="20" class="axis"
-                  marker-start="url(#arrowL)" marker-end="url(#arrowL)"/>
-            <text x="760" y="14" fill="rgba(255,255,255,.4)" font-family="JetBrains Mono" font-size="10">ℝ</text>
-
+<svg class="numline" viewBox="0 0 800 130">
+  <defs>
+    <marker id="arrowR2" markerWidth="10" markerHeight="10"
+            refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 Z" fill="rgba(255,255,255,.55)"/>
+    </marker>
+  </defs>
+  <!-- Trục số — chỉ mũi tên bên PHẢI (chiều dương) -->
+  <line x1="30" y1="20" x2="770" y2="20" class="axis"
+        marker-end="url(#arrowR2)"/>
+  <text x="755" y="14" fill="rgba(255,255,255,.45)"
+        font-family="JetBrains Mono" font-size="11" font-weight="600">ℝ</text>
             <!-- (a ; b) KHOẢNG -->
             <line x1="200" y1="45" x2="600" y2="45" stroke="#22d3ee" stroke-width="7" stroke-linecap="round"/>
             <circle cx="200" cy="45" r="6" fill="#080a16" stroke="#22d3ee" stroke-width="2.5"/>
