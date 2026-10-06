@@ -872,46 +872,57 @@ h2.stitle em{
     </div>
 
     <!-- Trục số: minh hoạ giao trên R -->
-    <div class="rv rv-up" style="--d:.78s;margin-top:18px">
-      <svg class="numline" viewBox="0 0 800 100">
-        <defs>
-          <defs>
-  <!-- Mũi tên trỏ sang phải (chiều dương) -->
-  <marker id="arrowR" markerWidth="10" markerHeight="10"
-          refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
-    <path d="M0,0 L8,4 L0,8 Z" fill="rgba(255,255,255,.55)"/>
-  </marker>
-</defs>
-<!-- Trục số — chỉ mũi tên bên PHẢI -->
-<line x1="30" y1="50" x2="770" y2="50" class="axis"
-      marker-end="url(#arrowR)"/>
-        <!-- Các mốc -->
-        <g class="tick">
-          <line x1="150" y1="42" x2="150" y2="58"/>
-          <line x1="350" y1="42" x2="350" y2="58"/>
-          <line x1="550" y1="42" x2="550" y2="58"/>
-        </g>
-        <g class="lbl">
-          <text x="150" y="78">1</text>
-          <text x="350" y="78">3</text>
-          <text x="550" y="78">6</text>
-        </g>
+<div class="rv rv-up" style="--d:.78s;margin-top:18px">
+  <svg class="numline" viewBox="0 0 800 100" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <marker id="arrowR_s4" markerWidth="6" markerHeight="6"
+              refX="5" refY="3" orient="auto">
+        <path d="M0,0 L5,3 L0,6 Z" fill="rgba(255,255,255,.55)"/>
+      </marker>
+    </defs>
 
-        <!-- Đoạn S ∩ T = [1 ; 3] -->
-        <line x1="150" y1="50" x2="350" y2="50" class="seg" stroke="#fbbf24"/>
-        <circle cx="150" cy="50" r="6" fill="#fbbf24"/>
-        <circle cx="350" cy="50" r="6" fill="#fbbf24"/>
-        <text x="250" y="26" class="cap-sym" fill="#fbbf24" text-anchor="middle">S ∩ T = [1 ; 3]</text>
+    <!-- Trục số — chỉ mũi tên bên PHẢI (chiều dương) -->
+    <line x1="30" y1="50" x2="765" y2="50"
+          stroke="rgba(255,255,255,.4)" stroke-width="2"
+          marker-end="url(#arrowR_s4)"/>
 
-        <!-- Chú thích dưới -->
-        <text x="400" y="94" fill="#7a84a8" text-anchor="middle"
-              font-family="JetBrains Mono" font-size="11" font-weight="600">
-          S = [1;+∞) , T = (−∞;3]  ⟹  S ∩ T = [1;3]
-        </text>
-      </svg>
-      <div class="numline-caption">Minh hoạ giao trên trục số thực</div>
-    </div>
+    <!-- Ký hiệu R ở đầu mũi tên -->
+    <text x="775" y="46" fill="rgba(255,255,255,.5)"
+          font-family="JetBrains Mono" font-size="13" font-weight="700">ℝ</text>
 
+    <!-- Các mốc 1, 3, 6 -->
+    <g stroke="rgba(255,255,255,.3)" stroke-width="1.5">
+      <line x1="150" y1="42" x2="150" y2="58"/>
+      <line x1="350" y1="42" x2="350" y2="58"/>
+      <line x1="550" y1="42" x2="550" y2="58"/>
+    </g>
+    <g fill="#a8b2d4" font-family="JetBrains Mono" font-size="12"
+       font-weight="600" text-anchor="middle">
+      <text x="150" y="78">1</text>
+      <text x="350" y="78">3</text>
+      <text x="550" y="78">6</text>
+    </g>
+
+    <!-- Đoạn S ∩ T = [1 ; 3] — tô đậm -->
+    <line x1="150" y1="50" x2="350" y2="50"
+          stroke="#fbbf24" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="150" cy="50" r="6" fill="#fbbf24"/>
+    <circle cx="350" cy="50" r="6" fill="#fbbf24"/>
+
+    <!-- Nhãn phía trên -->
+    <text x="250" y="24" fill="#fbbf24" text-anchor="middle"
+          font-family="JetBrains Mono" font-size="15" font-weight="700">
+      S ∩ T = [1 ; 3]
+    </text>
+
+    <!-- Chú thích dưới -->
+    <text x="400" y="94" fill="#7a84a8" text-anchor="middle"
+          font-family="JetBrains Mono" font-size="11" font-weight="600">
+      S = [1;+∞) , T = (−∞;3]  ⟹  S ∩ T = [1;3]
+    </text>
+  </svg>
+  <div class="numline-caption">Minh hoạ giao trên trục số thực</div>
+</div>
     <div class="grid g2" style="margin-top:16px;gap:14px">
       <div class="exbox rv rv-l" style="--d:.9s;padding:16px 20px">
         <h4>VÍ DỤ GIAO</h4>
